@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Encuesta de Clima Laboral · Paraíso Country Club</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header class="header">
+  <div class="logo">P</div>
+  <div class="titulo"><b>Paraíso Country Club</b><span>Encuesta de Clima Laboral</span></div>
+</header>
+
+<main class="wrap">
+  <div class="progreso oculto" id="progreso">
+    <div class="barra"><i id="barra"></i></div>
+    <div class="txt"><span id="pasoTxt"></span><span id="pctTxt"></span></div>
+  </div>
+  <div id="contenido"><div class="card">Cargando encuesta…</div></div>
+</main>
+
+<nav class="nav oculto" id="nav">
+  <div class="in">
+    <button class="btn sec" id="btnAtras">Atrás</button>
+    <span class="msg" id="msg"></span>
+    <button class="btn" id="btnSig">Siguiente</button>
+  </div>
+</nav>
+
+<script src="/encuesta.js"></script>
+</body>
+</html>

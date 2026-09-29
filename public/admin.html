@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Panel de Administración · Clima Laboral</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header class="header">
+  <div class="logo">P</div>
+  <div class="titulo"><b>Paraíso Country Club</b><span>Clima Laboral · Administración</span></div>
+  <div class="acciones oculto" id="accionesCab">
+    <button class="btn claro" id="btnSalir">Cerrar sesión</button>
+  </div>
+</header>
+
+<section class="login" id="vistaLogin">
+  <form class="card" id="formLogin">
+    <h1>Acceso de administrador</h1>
+    <p>Ingresa la contraseña para consultar los resultados de la encuesta.</p>
+    <input type="password" id="pass" placeholder="Contraseña" autocomplete="current-password" required>
+    <div class="error" id="errLogin"></div>
+    <button class="btn" style="width:100%">Entrar</button>
+  </form>
+</section>
+
+<main class="admin oculto" id="vistaAdmin">
+  <div class="filtros">
+    <label>Departamento
+      <select id="fDep"><option value="">Todos</option></select>
+    </label>
+    <label>Antigüedad
+      <select id="fAnt"><option value="">Todas</option></select>
+    </label>
+    <div class="der">
+      <span id="estadoBadge" class="badge" style="align-self:center"></span>
+      <button class="btn sec peq" id="btnEstado"></button>
+      <button class="btn sec peq" id="btnRefrescar">Actualizar</button>
+      <a class="btn oro peq" href="/api/admin/export.csv" style="text-decoration:none">Exportar a Excel (CSV)</a>
+    </div>
+  </div>
+
+  <div id="alertaFiltro" class="alerta oculto"></div>
+
+  <nav class="tabs" id="tabs">
+    <button data-tab="resumen" class="act">Resumen</button>
+    <button data-tab="preguntas">Por pregunta</button>
+    <button data-tab="comparativo">Por departamento</button>
+    <button data-tab="comentarios">Comentarios</button>
+    <button data-tab="respuestas">Respuestas individuales</button>
+  </nav>
+
+  <div id="panel"></div>
+</main>
+
+<div id="modal"></div>
+<script src="/admin.js"></script>
+</body>
+</html>

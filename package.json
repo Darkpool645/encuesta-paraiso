@@ -1,0 +1,15 @@
+{
+  "name": "paraiso-encuesta-clima-laboral",
+  "version": "1.0.0",
+  "description": "Encuesta de Clima Laboral – Paraíso Country Club (panel de empleados y panel de administrador)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": { "node": ">=18" },
+  "dependencies": {
+    "better-sqlite3": "^11.5.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1"
+  }
+}
