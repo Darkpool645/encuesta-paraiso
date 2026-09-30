@@ -78,7 +78,6 @@
           <div class="escala">
             ${escalaNum.map(o => `<button type="button" class="${v === o.valor ? 'sel' : ''}" data-q="${q.id}" data-v="${o.valor}" aria-pressed="${v === o.valor}"><b>${o.valor}</b>${esc(o.etiqueta)}</button>`).join('')}
           </div>
-          <button type="button" class="na ${v === 0 ? 'sel' : ''}" data-q="${q.id}" data-v="0" aria-pressed="${v === 0}">No aplica / No sé</button>
         </div>`;
       }
     }

@@ -68,7 +68,7 @@ app.post('/api/respuestas', h(async (req, res) => {
   const esc = {};
   for (const p of S.PREGUNTAS_ESCALA) {
     const v = Number(escala[p.id]);
-    if (!Number.isInteger(v) || v < 0 || v > 5) return res.status(400).json({ error: `Falta responder la pregunta ${p.num}.` });
+    if (!Number.isInteger(v) || v < 1 || v > 5) return res.status(400).json({ error: `Falta responder la pregunta ${p.num}.` });
     esc[p.id] = v;
   }
   const abi = {};

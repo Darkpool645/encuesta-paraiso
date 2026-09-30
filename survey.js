@@ -25,7 +25,6 @@ const ESCALA = [
   { valor: 3, etiqueta: 'Ni de acuerdo ni en desacuerdo' },
   { valor: 4, etiqueta: 'De acuerdo' },
   { valor: 5, etiqueta: 'Totalmente de acuerdo' },
-  { valor: 0, etiqueta: 'No aplica / No sé' },
 ];
 
 const RUBROS = [

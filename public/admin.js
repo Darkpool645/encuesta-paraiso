@@ -124,7 +124,7 @@
     <div class="kpis">
       <div class="kpi"><small>Respuestas</small><div class="v">${rows.length}</div><div class="d">${nComent} con comentarios</div></div>
       <div class="kpi"><small>Índice de clima laboral</small><div class="v" style="color:${colorFav(g.fav)}">${pct(g.fav)}</div><div class="d">Respuestas favorables (4 y 5)</div></div>
-      <div class="kpi"><small>Promedio general</small><div class="v">${fmt(g.prom, 2)}<span style="font-size:18px;color:var(--suave)"> / 5</span></div><div class="d">Excluye “No aplica”</div></div>
+      <div class="kpi"><small>Promedio general</small><div class="v">${fmt(g.prom, 2)}<span style="font-size:18px;color:var(--suave)"> / 5</span></div><div class="d">Escala de 1 a 5</div></div>
       <div class="kpi"><small>Respuestas desfavorables</small><div class="v" style="color:var(--s1)">${pct(g.desf)}</div><div class="d">Calificaciones 1 y 2</div></div>
     </div>
 
@@ -157,7 +157,7 @@
   }
 
   function porPregunta(rows) {
-    let h = `<div class="panel"><h3>Distribución de respuestas por pregunta</h3><div class="sub">Promedio en escala 1–5 (excluye “No aplica”). Pasa el cursor sobre una barra para ver los conteos.</div>${leyenda()}`;
+    let h = `<div class="panel"><h3>Distribución de respuestas por pregunta</h3><div class="sub">Promedio en escala 1–5. Pasa el cursor sobre una barra para ver los conteos.</div>${leyenda()}`;
     for (const r of E.rubros) {
       const s = stats(rows, r.preguntas.map(p => p.id));
       h += `<div class="rubro-cab">${esc(r.nombre)} <span style="font-weight:400;color:var(--suave)">· ${pct(s.fav)} favorable</span></div>`;
